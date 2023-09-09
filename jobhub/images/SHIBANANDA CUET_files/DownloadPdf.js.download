@@ -1,0 +1,386 @@
+﻿window.addEventListener('load', function () {
+
+    var btnSandesElem = document.getElementById('sandesemailpdfbtn');
+    var downloadBtnElem = document.getElementById('downloadpdfbtn');
+    var emailBtnElem = document.getElementById('emailpdfbtn');
+    const applicationNo = document.getElementById('lblApplicationNo').innerHTML;
+    const ipAddress = document.getElementById('lblIPAddress').innerHTML;
+    var progressBarElem = document.getElementById('i-progress-inner');
+    const emailAddress = document.getElementById('hdfEmailAddress').value;
+    const isEmailIdVerified = document.getElementById('hdfIsEmailVerified').value;
+    const AppformId = document.getElementById('hdfAppformId').value;
+    const frmdob = document.getElementById('hdfdob').value;
+    const IsSandesActive = document.getElementById('hdfIsSandesActive').value;
+    
+
+    // alert(AppformId);
+
+    function MakeProgress(value, textLabel) {
+        var label;
+        label = '(' + value.toString() + '%)' + textLabel;
+        $('.progress-bar')
+            .css("width", value.toString() + "%")
+            .attr('aria-valuenow', value)
+            .text(label);
+    }
+
+    function GenerateBarcode() {
+        JsBarcode("#barcode", applicationNo, {
+            format: "code39",
+            font: 'Free 3 of 9',
+            displayValue: false
+        });
+    }
+
+    function getCurrentDate() {
+        var today = new Date();
+        var dd = today.getDate();
+
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        var hours = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        // Check whether AM or PM 
+        var newformat = hours >= 12 ? 'PM' : 'AM';
+        // Find current hour in AM-PM Format 
+        hours = hours % 12;
+        // To display "0" as "12" 
+        hours = hours ? hours : 12;
+        min = min < 10 ? '0' + min : min;
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        if (min < 10) {
+            min = '0' + min;
+        }
+        if (hours < 10) {
+            hours = '0' + hours;
+        }
+        if (sec < 10) {
+            sec = '0' + sec;
+        }
+        today = dd + '/' + mm + '/' + yyyy + ' ' + hours + ':' + min + ':' + sec + ' ' + newformat;
+        return today;
+    }
+
+    function getFooterText(PageNo, TotalPages) {
+        var currentdate = getCurrentDate();
+        var text = 'Application Number : ' + applicationNo + '   IP Address : ' + ipAddress +
+            '                   Date and Time : ' + currentdate + '               [Page  ' + PageNo + ' of ' + TotalPages + ' ]';
+        return text;
+    }
+
+    function downloadPdf(isSendEmailFlow) {
+
+        progressBarElem.classList.remove('c-background--red');
+        var progressLabel = 'Downloading';
+        if (isSendEmailFlow === 1) {
+            progressLabel = 'Emailing'
+        }
+        if (isSendEmailFlow === 2) {
+            progressLabel = 'Downloading'
+        }
+        if (isSendEmailFlow === 3) {
+            progressLabel = 'Send to Sandes'
+        }
+        MakeProgress(20, progressLabel);
+        const fileName = 'ConfirmationPage-' + applicationNo;
+       
+        var element = ''; element = document.getElementsByTagName('body')[0];
+        element.style.fontSize = "10px";
+        if (AppformId == '102012211') { element.style.fontSize = "12px";}
+        var opt = {
+            margin: [2, 2, 2, 2],
+            filename: fileName,
+            image: { type: 'jpeg', quality: 0.7 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { format: 'a3', unit: 'mm' },
+            pagebreak: { before: '.i-pdf--page' },
+        };
+
+        const HEADER_HEIGHT = 0; // mm        
+        var elementOffSet = $('.i-pdf-first--page').offset().top; // * 2 + (HEADER_HEIGHT * 3.77) + 30 // px;
+        var marginElements = document.getElementsByClassName('i-pdf--page');
+
+        // Add margins because of scroll height and the header. Will be restored later.
+        var j = 0;
+        for (var i = 0; i < marginElements.length; i++) {
+            if (i == 0) {
+                marginElements[i].style.paddingTop = (elementOffSet * (1 * j + 2.1) + (HEADER_HEIGHT * 1)).toString() + 'px';
+            }
+            else {
+                marginElements[i].style.paddingTop = (elementOffSet * (1 * j + 2.3) + (HEADER_HEIGHT * 2)).toString() + 'px';
+            }
+        }
+
+        var headerElem = document.getElementById('i-Header');
+
+        html2pdf().from(headerElem).set(opt).toImg().get('img').then(function (img) {
+            MakeProgress(50, progressLabel);
+            html2pdf().from(element).set(opt).toPdf().get('pdf').then(function (pdf) {
+                MakeProgress(60, progressLabel);
+                var totalPages = pdf.internal.getNumberOfPages();
+                //pdf.setFont("helvetica");
+                pdf.setFontSize(10);
+                
+                if (AppformId == '102012211') {                   
+                    const QualificationCount = document.getElementById('hdfQualification').value;
+                    if (QualificationCount == 2) {
+                        document.getElementById('ConditionalBreak').className = '.i-pdf--page';
+                    }
+                }
+
+                if (AppformId == '101352211') {
+                    for (var i = 1; i <= totalPages; i++) {
+                        if ((i == 4 && totalPages > 4) || (i == 5 && totalPages > 5) || (i == 6 && totalPages > 6) || (i == 7 && totalPages > 7) || (i == 8 && totalPages > 8)) {
+                            pdf.deletePage(i);
+                        }
+
+                    }; totalPages = pdf.internal.getNumberOfPages();
+                    for (var i = 1; i <= totalPages; i++) {
+                        MakeProgress(60 + i * 10, progressLabel);
+                        pdf.setPage(i);
+
+                        if (i != 1) {
+                            pdf.addImage(img, 'JPEG', 6, 0, pdf.internal.pageSize.getWidth() - 12, HEADER_HEIGHT);
+                        }
+                        pdf.text(30, pdf.internal.pageSize.getHeight() - 1, getFooterText(i, totalPages));
+                    }
+                }
+                else if (AppformId == '101042211') {
+                    for (var i = 1; i <= totalPages; i++) {
+                        if (i == 2 && totalPages > 2) {
+                            pdf.deletePage(i);
+                        }
+
+                    }; totalPages = pdf.internal.getNumberOfPages();
+                    for (var i = 1; i <= totalPages; i++) {
+                        MakeProgress(60 + i * 10, progressLabel);
+                        pdf.setPage(i);
+
+                        if (i != 1) {
+                            pdf.addImage(img, 'JPEG', 6, 0, pdf.internal.pageSize.getWidth() - 12, HEADER_HEIGHT);
+                        }
+                        pdf.text(30, pdf.internal.pageSize.getHeight() - 1, getFooterText(i, totalPages));
+                    }
+                }
+                else {
+                    for (var i = 1; i <= totalPages; i++) {
+                        MakeProgress(60 + i * 10, progressLabel);
+                        pdf.setPage(i);
+
+                        if (i != 1) {
+                            pdf.addImage(img, 'JPEG', 6, 0, pdf.internal.pageSize.getWidth() - 12, HEADER_HEIGHT);
+                        }
+                        pdf.text(30, pdf.internal.pageSize.getHeight() - 1, getFooterText(i, totalPages));
+                    }
+                }
+            }).get('pdf').then(function (pdf) {
+                if (isSendEmailFlow === 1) {
+
+                    var pdfBase64 = btoa(pdf.output());
+
+                    function OnComplete(response) {
+                        for (var i = 0; i < marginElements.length; i++) {
+                            marginElements[i].style.paddingTop = '10px';
+                        }
+
+                        if (response.responseJSON.d === "1") {
+                            MakeProgress(100, 'Emailed');
+                        }
+                        else {
+                            MakeProgress(99, response.responseJSON.d);
+                            progressBarElem.classList.add('c-background--red');
+                        }
+
+                        downloadBtnElem.disabled = false;
+                        downloadBtnElem.classList.remove('btn-disabled');
+
+                        emailBtnElem.disabled = false;
+                        emailBtnElem.classList.remove('btn-disabled');
+                    }
+
+                    var emailData = {};
+
+                    emailData.EmailAddress = emailAddress;
+                    emailData.PDFBase64 = pdfBase64;
+                    emailData.FileName = fileName;
+                    emailData.frmdob = frmdob;
+
+                    $.ajax({
+                        type: "POST",
+                        url: "SendEmailPdf.aspx/SendEmail",
+                        data: "{emailData:" + JSON.stringify(emailData) + "}",
+                        contentType: "application/json;charset=utf-8",
+                        datatype: "json",
+                        complete: OnComplete
+                    });
+                }
+                else if (isSendEmailFlow === 2) {
+                    pdf.save(fileName);
+                    $.ajax
+                        ({
+                            type: 'POST',
+                            url: 'confirmationPage.aspx/UpdateFormStatus',
+                            data: "{'flag':'" + JSON.stringify("1") + "'}",
+                            contentType: "application/json;charset=utf-8;",
+                            dataType: "json",
+                            success: function (data) {
+                                alert("Download done successfully");
+
+                            },
+                            error: function (e) { alert("The call got failed due to " + e.d); }
+                        }
+                        );
+                    // Restore Margins added because of scroll height and the header.
+                    for (var i = 0; i < marginElements.length; i++) {
+                        //marginElements[i].style.paddingTop = '100px';
+                    }
+                    MakeProgress(100, 'Downloaded');
+                    //headerElem.style.backgroundColor = 'white';
+
+                    downloadBtnElem.disabled = false;
+                    downloadBtnElem.classList.remove('btn-disabled');
+
+                    if (isEmailIdVerified == 'Y') {
+                        emailBtnElem.disabled = false;
+                        emailBtnElem.classList.remove('btn-disabled');
+                    }
+                }
+                else if (isSendEmailFlow === 3) {
+
+                    //for (var i = 0; i < marginElements.length; i++)
+                    //{
+                    //marginElements[i].style.paddingTop = '100px';
+                    //  }
+                    MakeProgress(100, 'Send to Sandes');
+                    //headerElem.style.backgroundColor = 'white';
+
+                    btnSandesElem.disabled = false;
+                    btnSandesElem.classList.remove('btn-disabled');
+
+                    var pdfBase64 = btoa(pdf.output());
+
+                    var emailData = {};
+                    emailData.PDFBase64 = pdfBase64;
+                    emailData.FileName = fileName;
+                    emailData.frmdob = frmdob;
+                    //for sandes
+                    $.ajax({
+                        type: "POST",
+                        url: "confirmationPage.aspx/SendFiletoSandes",
+                        data: "{emailData:" + JSON.stringify(emailData) + "}",
+                        contentType: "application/json;charset=utf-8",
+                        datatype: "json",
+                        success: function (data) {
+                            // alert("Done");
+                            //alert("Confirmation Page is shared on Sandes App installed on your registered mobile.If you have not installed the App yet, you may do so by clicking on the link provided on<webite> or from Google Play Store.Once installed, you can click the button again to get your confirmation page on Sandes App");
+
+                        },
+                        error: function (e) { alert("The call got failed due to " + e.d); }
+                    });
+                }
+            });
+        });
+
+
+
+        //    if (AppformId == '101042211') {
+        //        for (var i = 1; i <= totalPages; i++) {
+        //            if (i == 2 && totalPages > 2) {
+        //                pdf.deletePage(i);
+        //            }
+        //            if (i == 2 && totalPages == 2) {
+        //                debugger;
+        //                //var paymentElem = document.getElementById('PanFeePayment');
+        //                //paymentElem.className = '.i-pdf--page';
+        //               await regenratePdf();
+        //                break;
+        //             // avaav=  myCallback();
+        //               // var totalPages1 = pdf.internal.getNumberOfPages();
+        //                //var totalPages2 = avaav.internal.getNumberOfPages();
+        //                //totalPages = totalPages + 1;
+        //            }
+        //        };
+
+
+
+        //.save().then(function () {
+        //    // Restore Margins added because of scroll height and the header.
+        //    for (var i = 0; i < marginElements.length; i++) {
+        //        marginElements[i].style.paddingTop = '100px';
+        //    }
+        //    MakeProgress(100);                
+        //    //headerElem.style.backgroundColor = 'white';
+        //    downloadBtnElem.disabled = false;
+        //    downloadBtnElem.classList.remove('btn-disabled');
+        //});
+        //});
+    }
+
+    GenerateBarcode();
+
+    if (isEmailIdVerified == 'Y') {
+        emailBtnElem.disabled = false;
+        emailBtnElem.title = 'Email will be sent to ' + emailAddress;
+    }
+    else {
+        emailBtnElem.disabled = true;
+        emailBtnElem.title = 'Can not send email as email address ' + emailAddress + ' is not verrified';
+    }
+
+    emailBtnElem.classList.remove('displayNone');
+    downloadBtnElem.classList.remove('displayNone');
+    if (IsSandesActive == 'true') {
+        btnSandesElem.classList.remove('displayNone');
+    }
+
+
+    emailBtnElem.addEventListener('click', function () {
+        //var headerElem = document.getElementById('i-Header');
+        //headerElem.style.backgroundColor = 'red';
+
+        emailBtnElem.disabled = true;
+        emailBtnElem.classList.add('btn-disabled');
+
+        downloadBtnElem.disabled = true;
+        downloadBtnElem.classList.add('btn-disabled');
+        //progressBarElem.classList.add('progress-bar-striped');
+        progressBarElem.classList.add('progress-bar-success');
+        progressBarElem.classList.remove('displayNone');
+        document.getElementById('i-progress').classList.remove('displayNone');
+        downloadPdf(1);
+    });
+
+    downloadBtnElem.addEventListener('click', function () {
+        //var headerElem = document.getElementById('i-Header');
+        //headerElem.style.backgroundColor = 'red';
+        downloadBtnElem.disabled = true;
+        downloadBtnElem.classList.add('btn-disabled');
+
+        emailBtnElem.disabled = true;
+        emailBtnElem.classList.add('btn-disabled');
+
+        //progressBarElem.classList.add('progress-bar-striped');
+        progressBarElem.classList.add('progress-bar-success');
+        progressBarElem.classList.remove('displayNone');
+        document.getElementById('i-progress').classList.remove('displayNone');
+        downloadPdf(2);
+    });
+
+    btnSandesElem.addEventListener('click', function () {
+        //debugger;
+        btnSandesElem.disabled = true;
+        btnSandesElem.classList.add('btn-disabled');
+        progressBarElem.classList.add('progress-bar-success');
+        progressBarElem.classList.remove('displayNone');
+        document.getElementById('i-progress').classList.remove('displayNone');
+        downloadPdf(3);
+
+    });
+
+});

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://examinationservices.nic.in/ExamSys23/Registration/confirmationPage.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+
+</title><link href="./SHIBANANDA CUET_files/style.css" rel="stylesheet"><link href="./SHIBANANDA CUET_files/opensans.css" rel="stylesheet"><link href="./SHIBANANDA CUET_files/bootstrap.css" rel="stylesheet">
+    <style>
+        .c-background--red {
+            background-color: #df4759 !important;
+        }
+
+        h1.heading_header {
+            font-size: 16px;
+            padding: 10px 0 0px 0;
+        }
+
+        h3.subheading_header {
+            font-size: 13px;
+        }
+
+        h6.third_subheading_header {
+            font-size: 14px;
+            margin: 0px;
+            padding: 0px;
+            color: #0026ff;
+        }
+
+        .table-responsive {
+            margin-bottom: -15px;
+        }
+
+        .c-width--30 {
+            width: 80%;
+            height: 40px;
+        }
+
+        .displayNone {
+            display: none;
+        }
+
+        .contentmid {
+            width: 1108px;
+        }
+
+            .contentmid h4 {
+                font-size: 14px;
+                margin: 0px;
+                padding-bottom: 2px;
+            }
+
+        .table td, th {
+            padding: 1px 3px !important;
+        }
+
+        .headerfirst img {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .selfDecl td {
+            padding: 4px 2px !important;
+        }
+
+        .form-group {
+            margin-bottom: 0px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container contentmid">
+        <div class="row" data-html2canvas-ignore="true">
+
+            <div class="col-sm-6">
+                <div class="progress displayNone" id="i-progress">
+                    <div id="i-progress-inner" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        0% Complete (success)
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 form-group text-right">
+
+                <button id="sandesemailpdfbtn" onclick="javascript:return confirm(&#39;Confirmation Page is shared on Sandes App installed on your registered mobile. If you have not installed the App yet, you may do so by clicking on the link provided on SANDES Portal https://www.sandes.gov.in or from Google Play Store. Once installed, you can click the button again to get your confirmation page on Sandes App.&#39;)" class="btn btn-primary btn-xs">
+                    
+                        Send Confirmation Page to Sandes Account
+                </button>
+                <button id="emailpdfbtn" class="btn btn-primary btn-xs" title="Email will be sent to pshibananda06@gmail.com">
+                    Email Confirmation Page
+                </button>
+                <button id="downloadpdfbtn" class="btn btn-primary btn-xs">
+                    Download Confirmation Page
+                </button>
+                <a href="https://examinationservices.nic.in/ExamSys23/Registration/Index.aspx" class="btn btn-danger btn-xs">Back
+                </a>
+
+
+            </div>
+        </div>
+        <form name="form1" method="post" action="https://examinationservices.nic.in/ExamSys23/Registration/confirmationPage.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7AADF20F">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="78Ybl48P1O0zS14lqksDH2urOR7CQVx8YIADeZHskWlFy1XFOb+i01m6yqVv3D6aBJlgl+idtBwu6BDSK7FMVC6OEydXwvD/EUNPRpWoWfk4HAZyKj8t4cUr9Ec+5kr+tEBubxD0GuH/U4iENdohPFxzKcWXlGujaNlo6hp8U6rumTvWztiBp5cvGlg32/IOXJS5LFRq7lDdnncq+BCiysQ/cmcX1usD5eanLj6NdUeiLYoL">
+</div>
+            <div class="i-pdf-first--page">
+                <div>
+                    <span id="lblIPAddress" class="displayNone">1.39.16.9</span>
+                </div>
+                <input type="hidden" name="hdfEmailAddress" id="hdfEmailAddress" value="pshibananda06@gmail.com">
+                <input type="hidden" name="hdfIsEmailVerified" id="hdfIsEmailVerified" value="Y">
+                <input type="hidden" name="hdfAppformId" id="hdfAppformId" value="101352311">
+                <input type="hidden" name="hdfdob" id="hdfdob" value="01-10-2002">
+                <input type="hidden" name="hdfIsSandesActive" id="hdfIsSandesActive" value="true">
+                <section class="headerfirst" id="i-Header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                <img id="imgLogoRight" class="img-responsive pull-left" src="./SHIBANANDA CUET_files/Handler1.ashx" style="border-width:0px;">
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                <h1 class="text-center heading_header">
+                                    <span id="lblHeader">Common University Entrance Test</span>
+                                </h1>
+                                <h3 class="text-center subheading_header">
+                                    <span id="lblSubHeader">CUET PG - 2023</span>
+                                </h3>
+                                <h6 class="text-center third_subheading_header">Confirmation Page
+                                </h6>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                <img id="imgLogoLeft" class="img-responsive pull-right" src="./SHIBANANDA CUET_files/Handler1(1).ashx" style="border-width:0px;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed">
+                        <tbody><tr>
+                            <th style="text-align: center; font-size: 20px; font-weight: 600; width: 25%;">Application No.
+                            </th>
+                            <th style="text-align: center; font-size: 20px; font-weight: 600; width: 25%;">
+                                <span id="lblApplicationNo">233510262132</span>
+                            </th>
+                            <td colspan="2" style="text-align: center;">
+                                <img class="c-width--30" id="barcode" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdQAAAB4CAYAAABLjgNNAAAAAXNSR0IArs4c6QAAFSpJREFUeF7tneGW27gOg2/f/6HnnknannHG7gdCZOSdg/7bciNKIEiQspP++vj4+Phf/gSBIBAEgkAQCAJLCPyKoC7hlw8HgSAQBIJAEHggEEENEYJAEAgCQSAINCAQQW0AMUsEgSAQBIJAEIighgNBIAgEgSAQBBoQiKA2gJglgkAQCAJBIAhEUMOBIBAEgkAQCAINCERQG0DMEkEgCASBIBAEIqjhQBAIAkEgCASBBgQiqA0gZokgEASCQBAIArKg/vr164HW1Q8rvdr//PcrxH8+r9pf/3/1869+r/anrqfu9+q87n669vcu/8QP4oMbb5efVXyv9neFL52X7C4ebryr+6nyvbr+3c6v7n8Kf/JfjQfhS/Zuf3Q+qi/VfHb9XbUOEdTfv7y4Kpj0eTfBugjyLv9EeJXAboNG/t0CQQ1ZBPWJAOG/Gn81H1y+0/7ITudf5R/57xY4d79T+FfxdfGiBj2C+jJhuwXbDZBLMLWA3EXQifCEn5vAlAAkiIQffT6CGkFVGopVflP+RFCfP02v5jPhWf2p+0yomVAPBFxN+AjqM0W7E7raALoNnFpg6Hxug0H8UxvMqfOr+OzyH0GNoB448F9PqGlCU0Lv9h9BjaCeXYeRANMNwF0aCso/4j/VN1rftbsC7+7X9Ufnq+JL65E9E+rFv0anJiwB7NpdgqkdORWsd/knwhN+bgLnyveJLOHfha/Lt9X4q/ng8p32R/Zp/Mn/dEO9G/8qvi5eVE/OmsbPv8uVb658H9zoajiI8ETwroI/VVCv9nflj85LdhePd52/WsBXz7u7oKv7n8Kf/FfjQfwie7c/Oh/VF5Uf1BBGUH9Hogp4dwC6Cda1PzfBq/4JfzVhqld8lADdDYPqj85L9rsWNCpIboNB51X56PKd4kF24j+dj9Z37S4e7n5df3S+Kr60Htlz5Zsr3wNHqgR0E6hLYKb9d63fdV41oasNxnRBi6A+Ea7eWKzyj/gy3dDvbmiq9czFi/L7dd0//50r31z5PrjQPcFNTSiUINWEUwsE4eOeVz1PBPX4wzKuoE8L2jT/iC8R1LzlezpRUQG7a0JNE3p3QpF/Kijq56sCQh3lKp/o8xHU48Tm4kGCpzZAUxO6yt9d/qfrz278qb6o+yP9oHqSCTU/7HDgAAnElKCpBWnKPxVsd3+ugLj+qCBMFXS1YLl4UHxW/dP6FA+yVwu+eh6KN9ldPrh4uf668aX1yJ5nqHmGejrxuwSvJjwVFJXAEdTzK041Hm68q/GpTkTV9e9W0NX9T+FP/qvxIHzJ3u2Pzkf1Rc0PakAyof6ORBXw7gB0E6xrf26CV/0T/mrCRFAjqJ9cuVtBV/nr5hut79rd/dwNf6ov1XpFeGZCzYSaCfU1SwZeuqIOVu2A1YSuNhhuAa3up9pAVte/W0FX9z+FP/mvxoPwJXu3PzpfBPUFoWoHcbeAUsC7CVbFa7d/Ijzh58ZbFbiu9VV/dF6yu/udKugqH6/8r5531b+Lp9ogEf+n/U/n/278q/gS38ieCTUTaibUTKjfEFBfQlMLDAlMBPWIQBf+FJ8Iar42cyoAqwSc6tB3E/ru/qmDpP2vdvDkv2v9TKjPZ7zVAr4a/90Tkrr/n1p/duNfzW+KF9kzoWZCzYSaCTUT6gsCqw06TeRqg7Xa0JEAVBsc2g/Zu/3R+SKoLwipHc5qAvzUDpEI101wN15TV350/mrCuedTCyjtl+x3LWgkMFPxV+O1K/+n+Ud8mc7/3fhX8XXxovw+vZ7Jvzbz/bX81QBME9rdn1tg1AQiAlIBXm2gVP+uQNH+XAGheLr7deNd3U+V79X173Z+df9T+JP/ajwIX7J3+6PzRVAzoZ42M1Sgq1+TIMFyEzyCenzJ4arARFCfCFDBUwummh/vLujq/t18o/Vdu7ufCOoz/9U/+XH8/Dj+gyurBUydEKkguAms+u9aX/VH5yW7u1+3gFb3UxW06vp3O7+6/yn8yX81HoQv2bv90fmoYasOAK6/K4GNoEZQI6hfGgo1wSKoecv3kyvVGwtXoOgGiuyuwLv7df2p+aeuT+uR/UrAI6j5cfwDB9SJtNrxUQepEti98ib/boEgvK4SnM5Ldne/asFx4+sW8NXzqvudOr+6/13+uyfGu/JPxZfiRfYIar42c+DIqsCoBaxrYnMTWPXftb7qjxKW7O5+1YLjxjeC+kQ4E+qRaav1Rs0Hld+0HtkjqBHUCOrJfQxNmCQQ9PlMqEeBcfGgBkJtANSCq65X5ccu/5lQ80tJpwJABYwI/lMJTR3VdEKRf+pQ1c/nyjf/2sy/JsC75j/xnxoGyg/X7tZDd7+uPzpfFV9aj+yZUDOhZkLNhPoNgdUGtdrgZEI9ItCFPwnAdEOtTvQR1JMi9PWv1GdGKuDUYa4ScCqguwl9d//UQdL+3Y7Y5WeVr9VnZnResrt4TPFfxSuCGkH9l35UGzQ3vym/yJ4JNRNqJtRMqJlQXxBYbdCrA8BUQ0MCkAk1z1BPBWA1AX4qoXcnFPnPhPpESC3AKp7Vjn6K/5lQj8hWbyzcG4dVPrl8cPfr+lPzQV2f1iN7JtRMqJlQM6FmQs2E+kCAGlwSTLJ3T8SuwFUbTrVBiaBGUCOoEdQIagQ1gnpSB9QbFnpme7L082bqQ5RgcjDdIVTXV68EqgBTB9XdsXXtz8Wj6p86YsLP7YhdfrrnU/3Recnu4uHGu7qfKt+r69/t/Or+p/An/9V4EL5k7/ZH56P6Us1n118ENT89eOCA+oy6SlAivErgagOlCpxbIAivqwJK5yW7u9+pgq7ywcWDzrvqn9aneJCd+D/tv1vg3P1O809dn+JFdnHe/LtMJtT8OP6DDCQYq88cqp+PoOaHHT55ebeC7hbgrvwi/xHUvOV74AAl0N071GlC704o8k8duvr5CGoENYL6vaGg/JmuP7vrL9UXdX/VBv/qivfbpJxnqL0dzTShdycU+SfCq5+PoEZQI6gR1KsBK1e+vxGodhA0sXYLGBV8164SwD0vdVzv8h9BfSJN8VDtLh/ceBO/1fy98l9d/27nV/c/hT/5766Hd8Of6ovKz2r+ZUJ9QeCnPMPYnVDknwivfj4TaibUTKiZUDOhNr/kc7cOiQRhukO8u/8IaibUs26+OhGsNsC7JkTiv1vPVPym6486AU7hX8XXrZf0rYGriTVv+TY3ANOEdgniElxNICKgWhBWC0414dzzdZ2X4uni4ca7up8q36vr3+386v6n8Cf/1XgQvmTv9kfnq+Y3rUf2K38R1HwP9cABdQJwBeeqoKgEzpVvrnxz5Zsr31z5Nk98d+uQSBC6O7aqoO32Tx0k4efGW50Yu9ZX/dF5ye7ud2pCUvk41VCt+nfxrN6wTOFPfJnO/934U31R97caz0yomVAzoS78UABN9K6AUIF0BWCqoKsFy8WDzrvqn9aneJC9WvDV86gCEEHt/Rpkrnzz4/iHnFpN8GrCkz+1IOXKN1e+ufLNlW+ufHPlu1XQpjtUVRCnJpRV/6sTSjXBab9kd/ebCfWIAN0wrE6A6iMAN56r+3P54O7X9afmg7o+rUf2TKiZULcKeibUJ/yrBXBVANSC495A0PmmGip1v1PndwvwajwJb7K7eERQn1fI6p98baZ5ot49Ie72H0GNoJ4VHyr4quBEUI/oTuMRQY2gnjYTasJSB+rauzrEu/uPoEZQI6jfEfgp9WdawKm+UX1R91dt8DKhviDwUwhNhMuEet5RdsU/z1C1tyhz5XtEoIt/u/NfFSx3gKDzRVBfEFIDskrAqYBSwHcL2m7/RHjCz71ietdLIRHUCOpXDlf5sMpvyp/p/Ffr91T9pfqi7i8T6sX3SLsJ5BKWAuQSrIsg7/JPhCd8VwsO+e9aXxVwOi/Z3f268a7up5p/1fXvdn51/1P4k/9qPAhfsnf7o/NV85vWI/uVv9fP/fnvvJSUl5IeXFi9EegSGDeBVf9d66v+KGHJ7u53qqCrDd6V/9Xzrvp38aSGWeXDtP9ugXP3O80/dX3iG9kjqPnazIEj1Y7OTSC1oKgEzg875IcdPrni8lEtuKpAR1DP+dgt4Gp9UONL65E9ghpBjaCe3Md0T+BdDYSa0NUGQy04VUFR//9MqEcEuvhHfOkWuLs1NNUBwcWL8jtXvvkt3wMH1ARXCygRsNrhVwVE9e8WCMLLFRBKeHe/EdQ9glYt+NX8Ir5EULWX5qr16EpAv+XZhzjTugXLJQAVMAJkqqC453H305Vw7/JPBYXwcwXE5WcV36v9RVCfCEzHX42Xy3fiJ9np/Kv8Jv8R1AjqgQNEuLsn1DShdycU+aeCon4+E2qeoX4V6CofIqhag1Ott7vrL9UXdX80kFGDfjWx5i3fvOX74MbqjQARsErgagFV/VMBcQU/E6pWwF18q3yIoGrxoHwge/cAofJDjS+tR3bxAvfvMhHUCGoEtfBj9rny1a7U3AaDCrg6gagFV12v2hDu8t8tcBSPbn+uwFUbrtV4ZkLNS0kHDqgTabXg0JWMmjBugpB/t0AQXq6ATOExVdBVPrh4UHxW/dP6FA+yT/OP/HcLnIvXNP/U9V286MYrghpBjaAufK8xgtrzPUQqcFTAI6hHBKfxoHh0C7jKjwjqbwRUAlABo5FdBby6Hwp4N8G69ufiUfVPHTrh5yYwdZSrfKLPuxPZFB5uvKv7qfK9ur7Lh6nzq/vf5b8aD8KX7N3+uvGl9cieZ6j5YYcDR0jgKGEiqMdnhnmGmmeoXxOsygfKNyrwrt0VeHe/rj86X7We0Xpkj6BGUCOor1ky8BazOhFTwpL9rgXNvSFaPa/a4E0VdHX/u/x3T4x35Z+KL8WL7BHUCGoENYL6DQG6siaBrL4kdlXw1AK2ul+14KoCXcVnl/8IqnaDshrPkxLz+Kt8bSZfm3kSoemlLbqSWS2o6uenClr1io/2S/a7TghUkCKoRwS68ov4EkGNoJ5OVKsEnCqouwl9d/8R1GeESHBUewT138+wuwXEzS/1EYAbT5Uv3Xi4+52qv1Rf3nXjkAm1aQJzE84lWBdB3uWfCE/4uQn8roKWCVWbADKhZkL9isDqgOTmN9UbsucZap6hnk78EdS138alguAKiJrQXc8wuxoWmphcPGh/aoPp8p3iQXZqKOl8tL5rd/Fw9+v6o/NV8aX1yB5BjaBGUE/uY0gQSSDo866AqAkdQe35YQlXIKr8mBIU4suV3d2Pi5frj84XQX1BSO0wqYARwacCSgGfJvTd/RPhaf9uArtXQl18jKA+EZiOvxqvXflP51/lN+XPdP3ZjX8VXxcvqicnPfvjr/KWb97yfRKh6RkzEZ4IvlpwyH/X+pRw1PCpdne/U4KyWlBX47/q38WzGq8p/Am/CKr2jH81nhHUJsHYTei7+ydBo/2vFjzy37V+BPV5BVst4Kvxj6AeEZzGw82XqYaimt/EN7LnGWqeoR44UiWgm0BdAjPtv2v9rvOqCZ1nqHmG+q8GhiYuV+DcfHH9qfmgrk/rkT2CGkGNoJ5Unu4r7QhqJtRPml0Jjlrw1QmTBJPs7n4iqM8rZPVPnqHmGeqDK92Cc5XAakdYnchUgXMLBOHjnncKD7eAVvdz9f+7eFB8VAGaOr+Kzy7/1XhU8d6Nf/XGjeJF9kyomVAzoWZC/YYANQQ04VQbnAjqEYEu/EkAIqh5KelUAFYJ+FM7xN0JRf6pg1Q/Xy3gmVCfyBL+NJFU41Mt4NX13f3uyv9p/Am/ajwIX7J3+6PzVfGl9cieCTUTaibUTKiZUF8QWG3QqxP8LkHvFrgIap6hnpTTvmeE1NFME/ru/qmDpP27CZwJNRPqOyZ0lb8R1CMCXQ0N1Rf1Ge9qg3QqMvlhh+9v6VHCuHY3wboI8i7/RHjCL4L6739dReWDG+9qfKoNZHV9lw9T51f3v8t/NR6EL9m7/XXjS+uRPVe+ufI9cIQEjhJGLeDqhKgSOM9Q137Mf6qgq3y48r8a/1X/xHfaH9lX843Wd+0uH1y8XH90viq+tB7ZI6gR1Ajqa5YMfC2oq4FQE7raYEwXNLoyi6AeEei68iS+dE+MEdQ8Qz0pp3mG6hZYdSLoEhg3gVX/Xeur/twCuFqA3XjTflU+RFAjqF8RWOWzmm8qP6khJH+nIpNnqHmGSgJTJShdyVQLdrd/Oq+7P1dAXH9UECKoewSN+L/KP+JLJtR8D/X0inK1o5kqKLsJfXf/VFBo/6sFh/x3rU8dLAmeanf3O8V/tcFxGww676p/Wp/4SfZp/pH/CGoENYLa+IxvOqEooamgqJ+vPjNUBW61oF593hWQKTwiqJlQPxGgfKR8IHt3vVHzQeU3rUf2vJSUl5JOGxSVgG4CqYKmEjiCmrd8vwpClQ8u34mfZF8VMFrftbt4uPXA9Ufnq+JL65E9ghpBjaC+ZknjDUAmVO1KzZ3YqYDnyveI7DQeFI9MqC83IR+iBKsTiBrg/+ozJOpougnWhafbMVb9UwdJ+LkJ7PLTPZ/qj85LdhcPN97V/VT5Xl3/budX9z+FP/mvxoPwJXu3Pzof1ZdqPrv+Tnr2x1/ln2/LP9/2JMKvtSvGLoFxE1j137W+6o8SluzufqcKulqwMqG+TC5N+UV86Ra4u/JP5beLF+V3BPWHENoliEpAN4GIgNM3Eqr/rvOp/tx4rTY4brxpvxHUI0LVRwCr/KP4RFC1RxLVenQloN/yLFe+vQGYJvTuhCL/dCWjfr76EooqcKsFrVpA6bxkd/cbQd0zIRL/3XiqAjBdf1YbqtXzV/Gl/CK7+ET07zK58s2V74MMqxORKmgqgSOoa1fwEdQI6icCVQEiwYug/ntWjaBGUCOoXxoKV/CvBIzWIzsVuO6JpLqfqv/q+nc7v7r/qYaG/FfjQfiSvdsfna/aINB6ZM+Emq/NHDhSJaCbQJlQzyciSliyu/GYKuirE8rqeVf9u3iqV66r+Ub4uHaXDy5erj86XxVfWo/sEdQIagT15Fam+0q7q4FQE7p6BT5d0Ehg3ImdCngE9YjsNB4Uj0yoL420+lLSSY3KXwWBIBAEgkAQCAK/EZCfoQaxIBAEgkAQCAJB4BqBCGrYEQSCQBAIAkGgAYEIagOIWSIIBIEgEASCQAQ1HAgCQSAIBIEg0IBABLUBxCwRBIJAEAgCQSCCGg4EgSAQBIJAEGhAIILaAGKWCAJBIAgEgSAQQQ0HgkAQCAJBIAg0IBBBbQAxSwSBIBAEgkAQ+D/+pet2X42/MQAAAABJRU5ErkJggg==">
+                            </td>
+                            <td>
+                                <span id="lblCorrectionStatus" text-align="center" font-weight="600" style="font-size:20px;">-</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="5" style="text-align: center;">
+                                <span id="lblTitle">DO NOT SEND THIS PAGE TO NATIONAL TESTING AGENCY (NTA).</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="5">CANDIDATE IS REQUESTED TO RETAIN THE PRINTOUT OF CONFIRMATION PAGE FOR FUTURE REFERENCE.
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div id="pnlRevPersonalDetails">
+	
+                    <h4>
+                        <span id="lblHeadCapPersonal">Personal Details</span>
+                    </h4>
+                    <div class="table-responsive">
+                        <table width="100%" class="table table-bordered table-condensed odd_td_bold">
+                            <tbody><tr id="trAadhar">
+		<td>
+                                    <span id="Label12">Aadhaar</span>
+                                </td>
+		<td>
+                                    <span id="lblAadharConsentType">Verified</span>
+                                </td>
+		<td>
+                                    <span id="Label13">Aadhaar Number</span>
+                                </td>
+		<td>
+                                    <span id="lbladhar">**** **** 1391</span>
+                                </td>
+	</tr>
+	
+                            <tr>
+
+                                <td id="tdRevCandidateName" width="25%">
+                                    <span id="lblCapName">Candidate's Name</span>
+                                </td>
+	
+                                <td width="25%">
+                                    <span id="lblCandidateName">SHIBANANDA PATRA</span>
+                                </td>
+                                <td id="tdRevDob">
+                                    <span id="lblCapDOB">Date of Birth</span>
+                                </td>
+	
+                                <td width="25%">
+                                    <span id="lblDOB">01-10-2002</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdRevMname">
+                                    <span id="lblCapMName">Mother/Guardian Name</span>
+                                </td>
+	
+                                <td>
+                                    <span id="lblMName">BAIJAYANTI PATRA</span>
+                                </td>
+                                <td id="tdRevGender">
+                                    <span id="lblCapGender">Gender</span>
+                                </td>
+	
+                                <td>
+                                    <span id="lblGender">Male</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdRevFname">
+                                    <span id="lblCapFName">Father/Guardian Name</span>
+                                </td>
+	
+                                <td>
+                                    <span id="lblFName">NALINDRA PATRA</span>
+                                </td>
+
+                                <td>
+                                    <span id="lblCapNationality">Nationality</span>
+                                </td>
+                                <td>
+                                    <span id="lblNationality">Indian</span>
+                                </td>
+                            </tr>
+
+                            
+                        </tbody></table>
+                    </div>
+                    <div class="table-responsive">
+
+                        <table width="100%" class="table table-bordered table-condensed odd_td_bold">
+                            <tbody><tr id="trRevGName">
+		<td width="50%">
+                                    <span id="lblCapGName">Guardian Mobile No (Optional)</span>
+                                </td>
+		<td>
+                                    <span id="lblGName"></span>
+                                </td>
+	</tr>
+	
+                            
+                            <tr id="trRevBirthCategory">
+		<td width="50%">
+                                    <span id="lblCapBirthCategory">Category</span>
+                                </td>
+		<td>
+                                    <span id="lblBirthCategory">SC</span>
+                                </td>
+	</tr>
+	
+                            
+                            <tr id="trRevPwD">
+		<td>
+                                    <span id="lblCapPwD">Are you a PwD candidate as per the provisions of the RPwD Act 2016 ?</span>
+                                </td>
+		<td>
+                                    <span id="lblPwD">No</span>
+                                </td>
+	</tr>
+	
+                            
+                            <tr id="trRevNCC">
+		<td>
+                                    <span id="lblCapncc">Claim for Sports Quota</span>
+                                </td>
+		<td>
+                                    <span id="lblncc">No</span>
+                                </td>
+	</tr>
+	
+                            
+                            
+                            
+                            
+                            <tr id="trRevJK">
+		<td>
+                                    <span id="lblCapJK">Are you Ex-Servicemen (E.S.M.)</span>
+                                </td>
+		<td>
+                                    <span id="lblJK">No</span>
+                                </td>
+	</tr>
+	
+
+                            
+
+                            
+                            <tr id="trRevDomicile">
+		<td>
+                                    <span id="lblCapDomicile">State Domicile</span>
+                                </td>
+		<td>
+                                    <span id="lblDomicile">ODISHA</span>
+                                </td>
+	</tr>
+	
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <tr id="trRevIncomeCategory">
+		<td>
+                                    <span id="lblCapAnnualIncome">Annual Family Income</span>
+                                </td>
+		<td>
+                                    <span id="lblIncomeCategory">RS. 700001-800000</span>
+                                </td>
+	</tr>
+	
+                            
+                            
+                            
+                            <tr id="trRevReligion">
+		<td>
+                                    <span id="lblCapReligion">Religion</span>
+                                </td>
+		<td>
+                                    <span id="lblReligion">Hindu</span>
+                                </td>
+	</tr>
+	
+                            <tr id="trRevNationality">
+		<td>
+                                    <span id="lblCapNationality1"></span>
+                                </td>
+		<td>
+                                    <span id="lblNationality1"></span>
+                                </td>
+	</tr>
+	
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            <tr id="trRevOtherInformation">
+		<td align="center" colspan="2">
+                                    
+                                            <table width="100%" class="table table-bordered ">
+                                        
+                                            <tbody><tr>
+                                                <td align="left" width="50%">
+                                                    <span id="rptRevCandidateOtherInfo_ctl01_lblCandidateOtherInfo">Status of Employment</span>:
+                                                </td>
+                                                <td align="left" style="font-weight: 400;">
+                                                    <span id="rptRevCandidateOtherInfo_ctl01_lblCandidateOtherInfoValue">Un-Employed</span>
+
+                                                </td>
+                                            </tr>
+                                            
+                                        
+                                            <tr>
+                                                <td align="left" width="50%">
+                                                    <span id="rptRevCandidateOtherInfo_ctl02_lblCandidateOtherInfo">Are you Kashmiri Migrant?</span>:
+                                                </td>
+                                                <td align="left" style="font-weight: 400;">
+                                                    <span id="rptRevCandidateOtherInfo_ctl02_lblCandidateOtherInfoValue">No</span>
+
+                                                </td>
+                                            </tr>
+                                            
+                                        
+                                            </tbody></table>
+                                   
+                                        
+                                </td>
+	</tr>
+	
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </tbody></table>
+                        <div style="border: 1px solid #ccc; padding:3px;">
+                            
+                        </div>
+                    </div>
+                
+</div>
+                <div id="pnlRevApplyFor">
+	
+                    <h4>
+                        <span id="lblRevApplyForSectionHeader">Apply For</span>
+                    </h4>
+                    <div class="table-responsive">
+                        <table cellspacing="6" cellpadding="4" width="100%" class="table table-bordered table-condensed odd_td_bold">
+                            <tbody><tr id="trRevApplyFor">
+		<td width="50%">
+                                    <span id="lblCapApplyFor">Apply For</span>
+                                </td>
+		<td>
+                                    
+                                    <div id="Panel1" class="lblstyle" dir="ltr" style="background-color:White;border-color:#CCCCCC;border-width:2px;border-style:Solid;width:425px;overflow:auto;border-radius: 4px; padding: 2px 8px;">
+			
+                                        <table id="cbApplyFor" disabled="disabled" border="0">
+				<tbody><tr>
+					<td><span disabled="disabled"><input id="cbApplyFor_0" type="checkbox" name="cbApplyFor$0" checked="checked" disabled="disabled"><label for="cbApplyFor_0">CUET PG</label></span></td>
+				</tr>
+			</tbody></table>
+                                    
+		</div>
+                                </td>
+	</tr>
+	
+                            
+                            
+                            
+                            
+                            
+
+                            <tr id="trRevGroup1">
+		<td width="50%">
+                                    <span id="lblRevGroup1">Father/Guardian Occupation</span>
+                                </td>
+		<td>
+                                    <span id="lblGroup1">OTHERS</span>
+                                </td>
+	</tr>
+	
+
+                            <tr id="trRevGroup2">
+		<td width="50%">
+                                    <span id="lblRevGroup2">Father/Guardian Qualification</span>
+                                </td>
+		<td>
+                                    <span id="lblGroup2">OTHERS</span>
+                                </td>
+	</tr>
+	
+
+
+                            <tr id="trRevGroup3">
+		<td width="50%">
+                                    <span id="lblRevGroup3">Mother/Guardian Occupation</span>
+                                </td>
+		<td>
+                                    <span id="lblGroup3">OTHERS (INCLUDING HOUSE WIFE)</span>
+                                </td>
+	</tr>
+	
+
+
+                            <tr id="trRevGroup4">
+		<td width="50%">
+                                    <span id="lblRevGroup4">Mother/Guardian Qualification</span>
+                                </td>
+		<td>
+                                    <span id="lblGroup4">OTHERS</span>
+                                </td>
+	</tr>
+	
+
+
+
+                            
+
+
+
+                            
+
+                            
+                            
+
+                            
+                            
+                            
+                            <tr id="trRevExamAttempt">
+		<td width="50%">
+                                    <span id="lblRevExamAttempt">Test Paper</span>
+                                </td>
+		<td>
+                                    
+                                    <span id="lblexamattemptreview">SCQP09 - Computer Science, Information Technology etc.</span>
+
+
+                                </td>
+	</tr>
+	
+                            <tr id="trRevChoiceofExamCentre1">
+		<td width="50%">
+                                    <span id="lblCapExamCity1">Exam Centre 1st</span>
+                                </td>
+		<td>
+                                    <span id="lblChoiceofExamCentre1">ODISHA - Kendujhar (Keonjhar)</span>
+                                </td>
+	</tr>
+	
+                            <tr id="trRevChoiceofExamCentre2">
+		<td width="50%">
+                                    <span id="lblCapExamCity2">Exam Centre 2nd</span>
+                                </td>
+		<td>
+                                    <span id="lblChoiceofExamCentre2">ODISHA - Bhadrak</span>
+                                </td>
+	</tr>
+	
+                            
+                            
+
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                            
+                        </tbody></table>
+                    </div>
+                
+</div>
+
+                
+                <br>
+                
+                
+
+                
+                <div id="pnlGateDetail">
+	
+                    <h4>
+                        <span id="lblHeadCapGATEDetails">Other National Level Examination Detail:</span>
+                    </h4>
+                    <div class="table-responsive">
+                        <table width="100%" class="table table-bordered table-condensed odd_td_bold">
+                            <tbody><tr id="tr_GateQualified">
+		<td width="50%">
+                                    <span id="lblCapGateQualified">Have you appeared and passed any other National Level Exam?</span>
+                                </td>
+		<td>
+                                    <span id="lblGateQualified">No</span>&nbsp;
+                                
+                                </td>
+	</tr>
+	
+                            
+                        </tbody></table>
+                    </div>
+                
+</div>
+                
+
+
+                
+                
+
+
+
+
+                
+
+                <br>
+                <div id="pnlRevContactDetails">
+	
+                    <h4>
+                        <span id="lblHeadCapContactDetail">Present Address</span>
+                    </h4>
+                    <div class="table-responsive">
+                        <table width="100%" class="table table-bordered table-condensed odd_td_bold">
+                            <tbody><tr>
+                                <td width="50%">
+                                    <span id="lblCapAddress">Premises No. / Name</span>,
+                                    <span id="lblCapLocality">Sub-Locality</span>,
+                                    <span id="lblCapCity">Locality</span>
+                                </td>
+                                <td>
+                                    <span id="lblAddress">ANANDAPUR,KEONJHAR</span>, 
+                               
+                                    <span id="lblCity">KEONJHAR</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="50%">
+                                    <div id="pnlstatedistrict">
+		
+                                        <span id="DivotherCountry">
+                                            <span id="lblCapDistrict">District</span>,
+                                      <span id="lblCapState">State</span>,
+                                        </span>
+                                        <span id="lblCapCountry">Country</span>,
+                                     
+                                    <span id="lblCapPinCode">Pin Code</span>
+                                    
+	</div>
+                                </td>
+                                <td>
+                                    <div id="pnlstatedistrictValue">
+		
+                                        <span id="DivotherCountryValue">
+                                            <span id="lblDistrict">KENDUJHAR (KEONJHAR)</span>,
+                                    <span id="lblState">ODISHA</span>,
+                                        </span>
+                                        <span id="lblCountry">India</span>,
+                                    
+                                    <span id="lblPinCode">758021</span>
+                                    
+	</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style1">
+                                    <span id="lblCapEmail">Email Address</span>
+                                </td>
+                                <td class="auto-style1">
+                                    <span id="lblEmail">psh**********@gmail.com</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span id="lblCapMobileNo">Mobile Number</span>
+                                </td>
+                                <td>
+                                    <span id="lblisdCodeRev">91</span>
+                                    -
+                                                    <span id="lblMobileNo">801****652</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span id="lblCapLandLineNo">Alternate Contact No.</span>
+                                    (Optional)
+                                </td>
+                                <td>
+                                    <span id="lblLandLineNo">NA</span>
+                                </td>
+                            </tr>
+
+
+                        </tbody></table>
+                    </div>
+                
+</div>
+                <div id="pnlPSate">
+	
+                    <h4>
+                        <span id="Label11">Permanent Address State</span>
+                    </h4>
+                    <div class="table-responsive">
+                        <table width="100%" class="table table-bordered table-condensed odd_td_bold">
+                            <tbody><tr>
+                                <td width="50%">
+                                    <span id="Label14">Permanent Address State</span>
+                                </td>
+                                <td>
+                                    <span id="lblpSate">ODISHA</span>
+                                </td>
+                            </tr>
+
+                        </tbody></table>
+                    </div>
+                
+</div>
+
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+
+                <div>
+                    
+                </div>
+
+                <div>
+                    <div id="PanImgUplode">
+	
+                        <h4>
+                            <span id="lblImgUplode">Images Uploaded by Candidate</span>
+                        </h4>
+                        <div id="trimgview" class="table-responsive">
+                            <table width="100%" class="table table-bordered table-condensed">
+                                <tbody><tr class="bg-info">
+                                    <th id="thPhoto" style="width: 30%; text-align: center;">Photo
+                                    </th>
+	
+
+                                    
+                                    <th id="thsign" style="width: 35%; text-align: center;">Signature
+                                    </th>
+	
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="imgCandPhoto" class="img-responsive center-block" src="./SHIBANANDA CUET_files/ViewUploadDocsApplication.ashx" style="height:100px;border-width:0px;">
+                                    </td>
+
+                                    
+                                    <td style="vertical-align: middle;">
+                                        <img id="imgCandSignature" class="img-responsive center-block" src="./SHIBANANDA CUET_files/ViewUploadDocsApplication(1).ashx" style="height:60px;border-width:0px;">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    
+</div>
+                </div>
+
+            </div>
+            <!--Use class .i-pdf--page for break div-->
+            <div id="ConditionalBreak" class="">
+                <div id="PanFeePayment" class="">
+	
+                    <h4>
+                        <span id="Label9">Fee Payment Details</span>
+                    </h4>
+                    <div id="trAreYouEmployedDetail" class="table-responsive">
+                        
+                                <table width="100%" class="table table-bordered table-condensed">
+                                    <tbody><tr class="bg-info">
+
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_lblFeeAmount">Activity</span>
+                                        </th>
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_lblTxnId">Application No</span>
+                                        </th>
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_lblTxnDate">Reference No</span>
+                                        </th>
+
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_Label3">Transaction Date</span>
+                                        </th>
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_Label4">Amount</span>
+                                        </th>
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_Label7">Customer ID</span>
+                                        </th>
+                                        <th>
+                                            <span id="rptPaymentDetails_ctl00_Label8">Payment Mode </span>
+                                        </th>
+                                    </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_lblPaymentProviderRemarks">Application fee</span>
+                                    </td>
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_lblTransactionId">233510262132</span>
+                                    </td>
+
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_lblTransactionDate">CPACQWQTJ3</span>
+                                    </td>
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_Label1">14/04/2023 08:22:02</span>
+                                    </td>
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_Label2">750</span>
+                                    </td>
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_Label5">23351026213201401</span>
+                                    </td>
+                                    <td>
+                                        <span id="rptPaymentDetails_ctl01_Label6">EPG</span>
+                                    </td>
+                                </tr>
+                            
+                                </tbody></table>
+                            
+                    </div>
+                
+</div>
+            </div>
+            
+
+            <span id="placeholder"><div class="i-pdf--page"><table class="table table-bordered" style="width:100%;"><tbody><tr class="bg-info"> <th style="width:15%;">Test Paper Code</th> <th style="width:20%;">Test Paper Medium</th> <th style="width:45%;">Universities</th></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>AKS University, Satna</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Apex University, Rajasthan</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Arunachal University of Studies</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>ASBM University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Assam University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Avinashilingam Institute for Home Science and Higher Education for Women, Coimbatore</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Babasaheb Bhimrao Ambedkar University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Banaras Hindu University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Barkatullah University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Career Point University, Kota</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Andhra Pradesh</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Haryana</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Himachal Pradesh</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Karnataka</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Kerala</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Odisha</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Rajasthan</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of South Bihar</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Central University of Tamil Nadu</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Chanakya University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Cluster University of Srinagar</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Dayalbagh Educational Institute, Agra</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Delhi Skill and Entrepreneurship University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Devi Ahilya Vishwavidyalaya, Indore</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Digital University Kerala</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Dr.&nbsp;Harisingh&nbsp;Gour&nbsp;Vishwavidyalaya</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Dr. A.P.J. Abdul Kalam Technical University, Lucknow</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Galgotias University, U.P.</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>G D Goenka University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Geeta University, Panipat, Haryana</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>GGS IP University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>GLA University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Graphic Era Hill University, Bhimtal Campus</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Graphic Era Hill University, Dehradun Campus</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Graphic Era Hill University, Haldwani Campus</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Graphic Era University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Gujarat Vidyapith</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Guru Ghasidas Vishwavidyalaya, Chattisgarh</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Gurukula Kangri, Haridwar</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Hemvati Nandan Bahuguna Garhwal University, Srinagar</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Himalayan University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>IGNTU-Regional Centre Manipur</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>IIMT University, Meerut</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Indira Gandhi Delhi Technical University for Women</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Indira Gandhi National Tribal University, Amarkantak</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Invertis University, Bareilly</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>ITM University, Gwalior</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Jagannath University, Bahadurgarh</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Jagan Nath University, Jaipur</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Jawaharlal Nehru University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>K.R. Mangalam University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>M.J.P. Rohilkhand University, Bareilly</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Madan Mohan Malaviya University of Technology, Gorakhpur</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Maharaja Bir Bikram University, Agartala</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Mahatma Gandhi Antarrashtriya Hindi Vishwavidyalaya, Wardha</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Mahatma Gandhi Kashi Vidyapith</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Manav Rachna International Institute of Research and Studies</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Mangalayatan University, Jabalpur</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Manipur University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Mewar University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Mizoram University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Mody University, Rajasthan</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Nirwan University, Jaipur</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>North-Eastern Hill University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Pondicherry University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Rajiv Gandhi National Institute of Youth Development</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Rajiv Gandhi University (A.P)</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Ramakrishna Mission Vivekananda Edu. &amp; Res. Inst.-Belur Main Campus (Kolkata)</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Ramakrishna Mission Vivekananda Edu. &amp; Res. Inst.-Coimbatore Campus</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>RNB Global University, Bikaner</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>S.K.M. University, Dumka</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sangam University, Bhilwara, Rajasthan</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sanskriti University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Shobhit Institute of Engineering &amp; Technology</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Shoolini University of Biotechnology and Management Sciences</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Shri Khushal Das University, Hanumangarh</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Shubham University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sikkim Professional University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sikkim University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Suresh Gyan Vihar University, Jaipur</td></tr></tbody></table></div><div class="i-pdf--page"><table class="table table-bordered" style="width:100%;"><tbody><tr class="bg-info"> <th style="width:15%;">Test Paper Code</th> <th style="width:20%;">Test Paper Medium</th> <th style="width:45%;">Universities</th></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sushant University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Teerthanker Mahaveer University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>The Gandhigram Rural Institute</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>The ICFAI University, Sikkim</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>The National Sanskrit University, Tirupati</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Tripura University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>University of Delhi</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>University of Engineering and Technology, Roorkee</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>University of Jammu</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Usha Martin University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Vikram University, Ujjain</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Vinayaka Mission's Research Foundation, Salem</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Visva-Bharati University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Vivekananda Global University, Jaipur</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Parul University, Vadodara</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>SRM University Delhi-NCR, Sonepat</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>University of Science &amp; Technology, Meghalaya</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sharda University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Baba Ghulam Shah Badshah University, Rajouri, J&amp;K</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Quantum University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Binod Bihari Mahto Koyalanchal University, Dhanbad</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>TERI School of Advanced Studies, New Delhi</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Dr. Shyama Prasad Mukherjee University, Ranchi</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Islamia College of Science and Commerce</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Islamic University of Science &amp; Technology, Awantipora (J&amp;K)</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Madhav University</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>School of Management Sciences, Varanasi</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Bahra University, Shimla Hills</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Uttaranchal University, Dehradun</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>Sanchi University of Buddhist Indic-Studies, Sanchi</td></tr><tr> <td>SCQP09</td> <td>English&nbsp;(for&nbsp;Section&nbsp;A&nbsp;only)</td> <td>SGT University, Gurugram</td></tr></tbody></table></div></span>
+
+
+
+
+
+            
+            
+            
+
+        </form>
+    </div>
+
+
+    <script src="./SHIBANANDA CUET_files/jquery-3.3.1.min.js.download" type="text/javascript"></script>
+    <script src="./SHIBANANDA CUET_files/JsBarcode.code39.min.js.download"></script>
+    <script src="./SHIBANANDA CUET_files/DownloadPdf.js.download"></script>
+    <script src="./SHIBANANDA CUET_files/html2pdf.bundle.min.js.download"></script>
+
+
+
+</body></html>
